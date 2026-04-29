@@ -1,0 +1,25 @@
+.venv/
+venv/
+env/
+ENV/
+
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# Testing
+.pytest_cache/
+
+# Editors and IDEs
+.vscode/
+*.swp
+
+# Environment files
+.env
+.env.*
