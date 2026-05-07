@@ -1,13 +1,7 @@
 # =============================================================================
 # FireCast PT — Generador de negativos sintéticos (FWI encadenado)
 # =============================================================================
-# Diferencia respecto a la versión anterior:
-#   Antes: calculábamos el FWI de un solo día con valores iniciales estándar
-#   Ahora: descargamos los 30 días anteriores y calculamos el FWI en cadena,
-#          pasando el resultado de cada día como punto de partida del siguiente.
-#          Esto da valores de DC y DMC mucho más realistas, especialmente
-#          en verano donde la sequía acumulada importa mucho.
-#
+# 
 # Instalación de dependencias:
 #   pip install pandas openpyxl requests tqdm
 # =============================================================================
