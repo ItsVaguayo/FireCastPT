@@ -122,7 +122,7 @@ def calcular_fwi(temp, rh, ws, pr, mes, ffmc0=85.0, dmc0=6.0, dc0=15.0):
     }
 
 # =============================================================================
-# OPEN-METEO — ahora acepta un rango de fechas
+# OPEN-METEO — 
 # =============================================================================
 
 def obtener_meteo_rango(lat, lon, fecha_inicio, fecha_fin):

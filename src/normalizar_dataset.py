@@ -87,7 +87,7 @@ for col in COLUMNAS_MINMAX:
     maximo = df[col].max()
     rango  = maximo - minimo
 
-    rangos[col] = {"min": minimo, "max": maximo}
+    rangos[col] = {"min": float(minimo), "max": float(maximo)}
 
     if rango == 0:
         df[col] = 0.0
