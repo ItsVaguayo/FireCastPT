@@ -23,7 +23,7 @@ random.seed(42)
 
 ARCHIVO_EXCEL  = "Registos_Incendios_SGIF_2021_2025.xlsx"
 ARCHIVO_SALIDA = "firecast_pt_dataset.csv"
-MAX_FILAS      = 500    # 0 = todo el dataset
+MAX_FILAS      = 0    # 0 = todo el dataset
 PAUSA_API      = 0.1    # segundos entre llamadas a Open-Meteo
 DIAS_PREVIOS   = 30     # días de histórico para encadenar el FWI
 
