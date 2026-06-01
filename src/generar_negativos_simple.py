@@ -1,13 +1,7 @@
 # =============================================================================
 # FireCast PT — Generador de negativos sintéticos (FWI encadenado)
 # =============================================================================
-# Diferencia respecto a la versión anterior:
-#   Antes: calculábamos el FWI de un solo día con valores iniciales estándar
-#   Ahora: descargamos los 30 días anteriores y calculamos el FWI en cadena,
-#          pasando el resultado de cada día como punto de partida del siguiente.
-#          Esto da valores de DC y DMC mucho más realistas, especialmente
-#          en verano donde la sequía acumulada importa mucho.
-#
+# 
 # Instalación de dependencias:
 #   pip install pandas openpyxl requests tqdm
 # =============================================================================
@@ -29,7 +23,7 @@ random.seed(42)
 
 ARCHIVO_EXCEL  = "Registos_Incendios_SGIF_2021_2025.xlsx"
 ARCHIVO_SALIDA = "firecast_pt_dataset.csv"
-MAX_FILAS      = 500    # 0 = todo el dataset
+MAX_FILAS      = 0    # 0 = todo el dataset
 PAUSA_API      = 0.1    # segundos entre llamadas a Open-Meteo
 DIAS_PREVIOS   = 30     # días de histórico para encadenar el FWI
 
@@ -128,7 +122,7 @@ def calcular_fwi(temp, rh, ws, pr, mes, ffmc0=85.0, dmc0=6.0, dc0=15.0):
     }
 
 # =============================================================================
-# OPEN-METEO — ahora acepta un rango de fechas
+# OPEN-METEO — 
 # =============================================================================
 
 def obtener_meteo_rango(lat, lon, fecha_inicio, fecha_fin):
